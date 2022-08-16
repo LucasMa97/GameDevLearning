@@ -18,12 +18,12 @@ Array2D(int x, int y) : m_array(0), rowNum(x), colNum(y)
 
 T& operator()(int x, int y)
 {
-    return m_array[x][y];
+    return m_array[x * colNum + y];
 }
 
 T operator()(int x, int y) const
 {
-    return m_array[x][y];
+    return m_array[x * colNum + y];
 }
 
 private:
